@@ -1,24 +1,45 @@
 {
-  "name": "physicslab",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.3"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
-  }
+	"name": "physicslab",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"check": "biome check .",
+		"check:fix": "biome check --write .",
+		"format": "biome format --write .",
+		"lint": "biome lint .",
+		"lint:fix": "biome lint --write .",
+		"type-check": "tsc --noEmit",
+		"test": "npm run type-check && npm run check",
+		"deploy": "vercel --prod",
+		"preview": "vercel"
+	},
+	"dependencies": {
+		"@react-three/drei": "^10.1.2",
+		"@react-three/fiber": "^9.1.2",
+		"@vercel/analytics": "^1.5.0",
+		"@vercel/speed-insights": "^1.2.0",
+		"canvas-sketch": "^0.7.7",
+		"clsx": "^2.1.1",
+		"framer-motion": "^12.16.0",
+		"lucide-react": "^0.512.0",
+		"mathjs": "^14.5.2",
+		"next": "15.3.3",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"tailwind-merge": "^3.3.0",
+		"three": "^0.177.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@tailwindcss/postcss": "^4",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"@types/three": "^0.177.0",
+		"tailwindcss": "^4",
+		"typescript": "^5"
+	}
 }
